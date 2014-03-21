@@ -7,10 +7,9 @@
 
 var koa = require('koa');
 var app = koa();
+var gokoa = require('gokoa');
 
-app.use(function *(){
-  this.body = 'Hello World';
-});
+gokoa.boot(app);
 
 var port = process.env.PORT || 3000;
 console.log('Koajs application started on port ' + port);

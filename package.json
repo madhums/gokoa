@@ -4,12 +4,11 @@
   "description": "A boilerplate for building web apps using koajs.",
   "main": "index.js",
   "engines": {
-    "node": "0.11.10",
-    "npm":  "1.4.x"
+    "node": "0.11.x"
   },
   "scripts": {
     "test": "npm test",
-    "start": "nodemon --harmony server.js"
+    "start": "NODE_PATH=./app/controllers:./app/api:./config NODE_ENV=development ./node_modules/.bin/nodemon --harmony server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,16 @@
   "author": "Madhusudhan Srinivasa",
   "license": "MIT",
   "dependencies": {
-    "koa": "latest"
+    "koa": "latest",
+    "koa-logger": "latest",
+    "koa-router": "latest",
+    "koa-static": "latest",
+    "co-views": "latest",
+    "co-body": "latest",
+    "swig": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
   },
   "bugs": {
     "url": "https://github.com/madhums/gokoa"
